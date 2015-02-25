@@ -27,13 +27,13 @@ before_script:
   # Could add more things to prep for the test run here.
 
 script:
-    # - bash scripts/run_tests.sh
+    - bash scripts/run_tests.sh
 after_script:
   # General-purpose clean-up could go here.
 after_success:
   # Maybe promote to test here?
 after_failure:
-  # Maybe roll back? 
+  # Maybe roll back?
 notifications:
   email:
     recipients:
