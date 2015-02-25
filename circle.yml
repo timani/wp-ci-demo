@@ -15,7 +15,7 @@ dependencies:
     #- git checkout pantheon/wp-meetup # fetch branch from server and checkout locally 
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
-    - git fetch pantheon:wp-meetup
+    - git fetch pantheon wp-meetup
     - git push --force pantheon wp-meetup 
     # - git log # fetch branch from server and checkout locally 
     - git remote -v
