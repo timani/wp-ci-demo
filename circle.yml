@@ -1,9 +1,7 @@
-# https://circleci.com/docs/configuration#machine
 machine:
-  php:
-    # https://circleci.com/docs/environment#php
-    version: 5.5.11 
-  environment:
+  services:
+    - php
+environment:
     # Set the site UUID here for now -> Private Environment variable
     PUUID: f86d7c5d-db0a-45f4-8a8a-dc0c37964bc1 
 dependencies:
@@ -18,22 +16,5 @@ dependencies:
     #- git checkout pantheon/wp-meetup # fetch branch from server and checkout locally 
     - git config --global user.email "timani@getpantheon.com"
     - git config --global user.name "Pantheon Timani"
-    # - git push --force pantheon wp-meetup
-test:
-    #
-    # This is where the documentation will be built. 
-  override:
-    # Build and deploy documentation
-    - echo "WordPress SF Meetup" 
-  # Perform post build operations  
-  post:
-# Custom notifications
-# Deploy to Pantheon
-# deployment:
-#  live:
-#    branch: master
-#    commands:
-#      - ./scripts/deploy.sh
-notify:
-  webhooks:
-    # A list of hashes representing hooks. Only the url field is supported.
+    # - git push --force pantheon wp-meetup 
+    - echo "hello"
