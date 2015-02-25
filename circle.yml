@@ -11,7 +11,7 @@ dependencies:
   # Install additional test dependencies here (like Casper, Behat, etc).
   override:   
     # Build the documentation  
-    - git fetch pantheon wp-meetup; 
+    - git show-ref; 
     - git config --global push.default simple
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
