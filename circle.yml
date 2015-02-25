@@ -1,7 +1,7 @@
 machine:
   services:
     - php
-environment:
+  environment:
     # Set the site UUID here for now -> Private Environment variable
     PUUID: f86d7c5d-db0a-45f4-8a8a-dc0c37964bc1 
 dependencies:
