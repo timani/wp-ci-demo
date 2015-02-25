@@ -18,4 +18,4 @@ dependencies:
     - git config --global user.email "timani@getpantheon.com"
     - git config --global user.name "Pantheon Timani"
     # - git push --force pantheon wp-meetup 
-    - echo "hello"
+    - git remote -v
