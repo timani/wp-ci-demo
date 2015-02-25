@@ -8,7 +8,7 @@ export TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
 # Use that as our path
 export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
 
-git config --global user.email "timani@getpantheon.com"
+git config --global user.email "timani27@gmail.com"
 git config --global user.name "Pantheon Automation"
 
 # Build the makefile into a separate dir so it is a distinct git working copy.
