@@ -1,6 +1,7 @@
 machine:
-  services:
-    - php
+  php:
+    # https://circleci.com/docs/environment#php
+    version: 5.5.11 
   environment:
     # Set the site UUID here for now -> Private Environment variable
     PUUID: f86d7c5d-db0a-45f4-8a8a-dc0c37964bc1 
