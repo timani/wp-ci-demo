@@ -5,8 +5,6 @@
 echo "StrictHostKeyChecking no" > ~/.ssh/config
 export TRAVIS_COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
 
-# Install Drush and Behat
-composer install
 # Use that as our path
 export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
 
