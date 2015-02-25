@@ -1,6 +1,6 @@
 language: php
 php:
-  - 5.5
+  - 5.3
 env:
   global:
     # Your Pantheon site's UUID (e.g. from your dashboard URL)
