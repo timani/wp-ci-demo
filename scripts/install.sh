@@ -14,7 +14,6 @@ git config --global user.name "Pantheon Automation"
 # Build the makefile into a separate dir so it is a distinct git working copy.
 cd $TRAVIS_BUILD_DIR
 git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/repo
-drush make example.make $HOME/.build/$PNAME
 
 # Git history switcharoo to generate a specific dif-set.
 mv $HOME/.build/repo/.git $HOME/.build/$PNAME/.git
