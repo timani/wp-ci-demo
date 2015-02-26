@@ -3,7 +3,7 @@ php:
 - 5.5
 env:
   global:
-  - PUUID='f86d7c5d-db0a-45f4-8a8a-dc0c37964bc1'
+  - PUUID='b19020fa-e69f-4555-8e04-a711bd343414'
   - PNAME='Tickets'
   - PEMAIL='timani@getpantheon.com'
 before_install:
