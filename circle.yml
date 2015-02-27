@@ -18,6 +18,12 @@ dependencies:
     - git config --global user.name "Pantheon Timani"
     - git remote -v
     - git remote show pantheon
-    - git push -u pantheon wp-meetup 
     # - git log # fetch branch from server and checkout locally 
-    - git remote -v
+    - git checkout pantheon-wp-meetup
+    - git merge master
+    - git push pantheon wp-meetup
+## Customize test commands
+test:
+  override:
+  # - phpunit test/unit-tests # use PHPunit for testing
+  # - git push -u pantheon wp-meetup 
