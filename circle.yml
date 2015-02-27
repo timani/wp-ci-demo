@@ -12,6 +12,7 @@ dependencies:
   override:   
     # Build the documentation  
     - git fetch pantheon 
+    - git branch --set-upstream pantheon-wp-meetup pantheon/wp-meetup
     - git config --global push.default simple
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
