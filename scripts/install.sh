@@ -2,8 +2,7 @@
 
 # Dynamic hosts through Pantheon mean constantly checking interactively
 # that we mean to connect to an unknown host. We ignore those here.
-echo "StrictHostKeyChecking no" > ~/.ssh/config
-export $COMMIT_MSG="$(git log --format=%B --no-merges -n 1)"
+echo "StrictHostKeyChecking no" > ~/.ssh/config 
 
 # Use that as our path
 export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
