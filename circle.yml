@@ -11,12 +11,12 @@ dependencies:
   # Install additional test dependencies here (like Casper, Behat, etc).
   override:   
     # Build the documentation  
-    - git fetch pantheon
+    - git fetch pantheon 
     - git config --global push.default simple
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
     - git remote -v
     - git remote show pantheon
-    - git push pantheon:wp-meetup 
+    - git push -u pantheon wp-meetup 
     # - git log # fetch branch from server and checkout locally 
     - git remote -v
