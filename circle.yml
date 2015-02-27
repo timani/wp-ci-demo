@@ -21,7 +21,7 @@ dependencies:
     # - git log # fetch branch from server and checkout locally 
     - git checkout pantheon-wp-meetup
     - git merge master
-    - git push pantheon/wp-meetup
+    - git push pantheon pantheon:wp-meetup
 ## Customize test commands
 test:
   override:
