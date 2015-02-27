@@ -4,7 +4,7 @@ machine:
     version: 5.5.11 
   environment:
     # Set the site UUID here for now -> Private Environment variable
-    PMAME: "wp-ci-demo"
+    PNAME: "wp-ci-demo"
     PUUID: b19020fa-e69f-4555-8e04-a711bd343414
     COMMIT_MSG: "$(git log --format=%B --no-merges -n 1)"
 dependencies:
