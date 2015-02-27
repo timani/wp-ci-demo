@@ -15,8 +15,8 @@ dependencies:
     - git config --global push.default simple
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
-    - git remotes -v
-    - git remote
+    - git remote -v
+    - git remote show pantheon
     - git push pantheon wp-meetup 
     # - git log # fetch branch from server and checkout locally 
     - git remote -v
