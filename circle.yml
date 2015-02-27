@@ -13,6 +13,7 @@ dependencies:
     # Build the documentation  
     - git fetch pantheon 
     - git branch --track pantheon-wp-meetup pantheon/wp-meetup
+    - git config --global push.default pantheon
     - git config --global push.default simple
     - git config --global user.email "timani27@gmail.com"
     - git config --global user.name "Pantheon Timani"
@@ -21,7 +22,7 @@ dependencies:
     # - git log # fetch branch from server and checkout locally 
     - git checkout pantheon-wp-meetup
     - git merge master
-    - git push pantheon pantheon:wp-meetup
+    - git push pantheon wp-meetup
 ## Customize test commands
 test:
   override:
