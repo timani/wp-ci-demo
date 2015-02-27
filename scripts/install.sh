@@ -15,6 +15,7 @@ cd $TRAVIS_BUILD_DIR
 git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/repo
 
 # Git history switcharoo to generate a specific dif-set.
+mkdir $HOME/.build/$PNAME
 mv $HOME/.build/repo/.git $HOME/.build/$PNAME/.git
 cd $HOME/.build/$PNAME
 
