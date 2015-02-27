@@ -10,13 +10,12 @@ export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
 git config --global user.email "timani27@gmail.com"
 git config --global user.name "Pantheon Automation"
 
-# Build the makefile into a separate dir so it is a distinct git working copy.
-cd $TRAVIS_BUILD_DIR
-git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/repo
+# Build the makefile into a separate dir so it is a distinct git working copy. 
+git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/pantheon-repo
 
 # Git history switcharoo to generate a specific dif-set.
 mkdir $HOME/.build/$PNAME
-mv $HOME/.build/repo/.git $HOME/.build/$PNAME/.git
+mv $HOME/.build/pantheon-repo/.git $HOME/.build/$PNAME/.git
 cd $HOME/.build/$PNAME
 
 # Output of the diff vs upstream.
