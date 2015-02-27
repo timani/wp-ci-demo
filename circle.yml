@@ -17,6 +17,6 @@ dependencies:
     - git config --global user.name "Pantheon Timani"
     - git remote -v
     - git remote show pantheon
-    - git push pantheon/wp-meetup 
+    - git push pantheon:wp-meetup 
     # - git log # fetch branch from server and checkout locally 
     - git remote -v
