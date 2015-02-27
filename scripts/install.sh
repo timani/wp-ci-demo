@@ -19,7 +19,9 @@ mv $HOME/.build/repo/.git $HOME/.build/$PNAME/.git
 cd $HOME/.build/$PNAME
 
 # Output of the diff vs upstream.
+echo "-----------------------------------"
 echo "Here's the status change!"
+echo "-----------------------------------" 
 git status
  
 # Push it real good.
