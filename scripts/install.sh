@@ -12,7 +12,7 @@ git config --global user.name "Pantheon Automation"
 
 # Build the makefile into a separate dir so it is a distinct git working copy. 
 git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/pantheon-repo
-
+git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git 
 echo "-----------------------------------"
 echo "Start - Debugging Git"
 echo "-----------------------------------" 
