@@ -7,9 +7,6 @@ echo "StrictHostKeyChecking no" > ~/.ssh/config
 # Use that as our path
 export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
 
-git config --global user.email "timani27@gmail.com"
-git config --global user.name "Pantheon Automation"
-
 # Build the makefile into a separate dir so it is a distinct git working copy. 
 git clone --depth 2 ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git $HOME/.build/pantheon-repo
 
@@ -26,12 +23,10 @@ echo "-----------------------------------"
 mkdir $HOME/.build/$PNAME
 mv $HOME/.build/pantheon-repo/.git $HOME/.build/$PNAME/.git
 cd $HOME/.build/$PNAME
-# git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git 
+git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git 
 git config --global push.default simple
 git config --global user.email "timani27@gmail.com"
 git config --global user.name "Pantheon Timani"
-git pull pantheon wp-meetup
-git push pantheon wp-meetup 
 git log # fetch branch from server and checkout locally 
 # Output of the diff vs upstream.
 echo "-----------------------------------"
@@ -42,4 +37,4 @@ echo "-----------------------------------"
 # Push it real good.
 git add --all
 git commit -a -m "Makefile build by CI: '$COMMIT_MSG'"
-git push wp-meetup
+git push pantheon wp-meetup
