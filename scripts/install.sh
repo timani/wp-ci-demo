@@ -27,6 +27,8 @@ git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.
 git config --global push.default simple
 git config --global user.email "timani27@gmail.com"
 git config --global user.name "Pantheon Timani"
+git fetch origin
+git checkout wp-meetup # fetch branch from server and checkout locally
 git log # fetch branch from server and checkout locally 
 # Output of the diff vs upstream.
 echo "-----------------------------------"
