@@ -19,4 +19,4 @@ dependencies:
 test:
   override:
   # - phpunit test/unit-tests # use PHPunit for testing
-  #  - git push -u pantheon wp-meetup 
+    - bash ./scripts/run_tests.sh
