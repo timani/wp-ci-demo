@@ -25,6 +25,8 @@ echo "-----------------------------------"
 git status
  
 # Push it real good.
+git branch -v
+git remote -v
 git add --all
 git commit -a -m "Makefile build by CI: '$COMMIT_MSG'"
 git push pantheon wp-meetup
