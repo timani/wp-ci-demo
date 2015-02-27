@@ -26,7 +26,6 @@ echo "-----------------------------------"
 mkdir $HOME/.build/$PNAME
 mv $HOME/.build/pantheon-repo/.git $HOME/.build/$PNAME/.git
 cd $HOME/.build/$PNAME
-git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git 
 
 # Output of the diff vs upstream.
 echo "-----------------------------------"
@@ -37,4 +36,4 @@ echo "-----------------------------------"
 # Push it real good.
 git add --all
 git commit -a -m "Makefile build by CI: '$COMMIT_MSG'"
-git push pantheon wp-meetup
+git push wp-meetup
