@@ -39,4 +39,4 @@ echo "-----------------------------------"
 # Push it real good.
 git add --all
 git commit -a -m "Makefile build by CI: '$COMMIT_MSG'"
-git push pantheon pantheon/wp-meetup
+git push origin wp-meetup
