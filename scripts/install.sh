@@ -22,8 +22,7 @@ echo "-----------------------------------"
 # Git history switcharoo to generate a specific dif-set.
 mkdir $HOME/.build/$PNAME
 mv $HOME/.build/pantheon-repo/.git $HOME/.build/$PNAME/.git
-cd $HOME/.build/$PNAME
-git remote add pantheon ssh://codeserver.dev.$PUUID@codeserver.dev.$PUUID.drush.in:2222/~/repository.git 
+cd $HOME/.build/$PNAME 
 git config --global push.default simple
 git config --global user.email "timani27@gmail.com"
 git config --global user.name "Pantheon Timani"
