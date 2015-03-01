@@ -5,7 +5,7 @@
 echo "StrictHostKeyChecking no" > ~/.ssh/config 
 
 echo "-----------------------------------"
-echo "The build is starting...
+echo "The build is starting..."
 echo "-----------------------------------" 
 
 # Use that as our path
