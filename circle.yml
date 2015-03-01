@@ -20,3 +20,8 @@ test:
   override:
   # - phpunit test/unit-tests # use PHPunit for testing
     - bash ./scripts/run_tests.sh
+deployment:
+  pantheon:
+    branch: production
+    commands:
+      - ./deploy_prod.sh
