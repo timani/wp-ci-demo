@@ -4,6 +4,10 @@
 # that we mean to connect to an unknown host. We ignore those here.
 echo "StrictHostKeyChecking no" > ~/.ssh/config 
 
+echo "-----------------------------------"
+echo "The build is starting...
+echo "-----------------------------------" 
+
 # Use that as our path
 export PATH="$TRAVIS_BUILD_DIR/vendor/bin:$PATH"
 
