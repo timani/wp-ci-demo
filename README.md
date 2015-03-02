@@ -1,7 +1,7 @@
 #### Build Status
 [![Build Status](https://travis-ci.org/joshkoenig/drush-make-ci.svg?branch=master)](https://travis-ci.org/joshkoenig/drush-make-ci)
 
-```WordPress + TravisCI = Contiunous Delivery```
+```WP + TravisCI = Contiunous Delivery```
 ======
 
 This is a working example of how you can integrate a drush_make process with [Pantheon](https://pantheon.io) using [TravisCI](https://travis-ci.org) and some behat testing. Pretty suave!
