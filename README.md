@@ -1,32 +1,38 @@
-# WordPress
+#### Build Status
+[![Build Status](https://travis-ci.org/joshkoenig/drush-make-ci.svg?branch=master)](https://travis-ci.org/joshkoenig/drush-make-ci)
 
-This is a WordPress repository configured to run on the [Pantheon platform](https://www.getpantheon.com).
+```WordPress + TravisCI = Contiunous Delivery```
+======
 
-Pantheon is website platform optimized and configured to run high performance sites with an amazing developer workflow. There is built-in support for features such as Varnish, redis, Apache Solr, New Relic, Nginx, PHP-FPM, MySQL, PhantomJS and more. 
+This is a working example of how you can integrate a drush_make process with [Pantheon](https://pantheon.io) using [TravisCI](https://travis-ci.org) and some behat testing. Pretty suave!
 
-## Getting Started
+Feel free to hack this to heck for your own personal use-cases.
 
-### 1. Spin-up a site
+#### Getting Started
 
-If you do not yet have a Pantheon account, you can create one for free. Once you've verified your email address, you will be able to add sites from your dashboard. Choose "WordPress" to use this distribution.
+This repo is meant to be run on [TravicCI](https://travis-ci.org), which is free for public GitHub repos (thanks, Travis!). You can be up and running with your own fork in just a few steps.
 
-### 2. Load up the site
+1. Create a new Pantheon site which is the "target" for your build. Use the vanilla version of core that you want to use. For this example, that was Drupal 7.
 
-When the spin-up process is complete, you will be redirected to the site's dashboard. Click on the link under the site's name to access the Dev environment.
+2. You will need to create a new SSH keypair to push code to Pantheon.
+  ```
+  ssh-keygen -q -f travis-ci-key -t rsa -P '' -C 'travis-ci-key'
+  ```
 
-![alt](http://i.imgur.com/2wjCj9j.png?1, '')
+3. Add the resulting ```travis-ci-key.pub``` to the Pantheon user account you want Travis acting as. You can also set up a separate user for this to keep things separate more separate. I have mine acting as "josh+travis@getpantheon.com" to keep it on lockdown.
 
-### 3. Run the WordPress installer
+4. Use [```travis encrypt_file```](http://docs.travis-ci.com/user/encrypting-files/) option to encrypt and place in the ci repository. This will allow it to push code to pantheon as the user you set up in #3.
 
-How about the WordPress database config screen? No need to worry about database connection information as that is taken care of in the background. The only step that you need to complete is the site information and the installation process will be complete.
+5. Update ```.travis.yml``` with the ```PUUID``` and ```PNAME``` values for your own site.
 
-We will post more information about how this works but we recommend developers take a look at `wp-congfig.php` to get an understanding.
+6. Use the (```travis encrypt```)[http://docs.travis-ci.com/user/build-configuration/#Secure-environment-variables] command to add secure/secret environment variables to ```.travis.yml``` for ```PEMAIL``` (your Pantheon user email) and ```PPASS``` (the user passsword).
 
-![alt](http://i.imgur.com/4EOcqYN.png, '')
+7. Still in ```.travis.yml```, update the ```before_install``` step  to use the key you added in step 3.
 
-If you would like to keep a separate set of configuration for local development, you can use a file called `wp-config-local.php`, which is already in our .gitignore file.
+8. Finally, update ```behat.yml``` with your own ```base_url``` for testing.
 
-### 4. Enjoy!
+At this point you can push these changes to the ci repo up to github, log into Travis, add the ci repo, and the test should run.
 
-![alt](http://i.imgur.com/DwFe35s.png, '')
+You're free to start hacking on the make file, the install steps, and the tests.
 
+Pull requests are welcome!
